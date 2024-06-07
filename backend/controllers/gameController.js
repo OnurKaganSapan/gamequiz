@@ -36,13 +36,13 @@ export const getGamesPair = async (req, res) => {
     try {
         // 1 milyon satıştan fazla olan oyunları al
         const topGames = await Game.aggregate([
-            { $match: { Global_Sales: { $gt: 1 } } },
+            { $match: { total_sales: { $gt: 1 } } },
             { $sample: { size: 2 } } // Rastgele iki oyun seç
         ]);
 
         // Her iki oyun için resim URL'si çek
         for (const game of topGames) {
-            const cleanedName = cleanGameName(game.Name);
+            const cleanedName = cleanGameName(game.title);
             game.imageUrl = await getRawgImageUrl(cleanedName);
         }
 

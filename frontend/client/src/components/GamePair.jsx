@@ -12,7 +12,7 @@ const GamePair = ({ games, onGuess, showSales, disabled }) => {
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mt: 2, flexWrap: 'wrap', gap: 2 }}>
         {showSales && (
           <Typography variant="h6" component="p" sx={{ mr: 2 }}>
-            {games[0].Global_Sales}M
+            {games[0].total_sales}M
           </Typography>
         )}
         <Card sx={{ width: { xs: '100%', md: 300 }, textAlign: 'center', mx: 2 }}>
@@ -20,7 +20,7 @@ const GamePair = ({ games, onGuess, showSales, disabled }) => {
             <Box
               component="img"
               src={games[0].imageUrl}
-              alt={games[0].Name}
+              alt={games[0].title}
               sx={{
                 width: '100%',
                 height: 'auto',
@@ -37,7 +37,7 @@ const GamePair = ({ games, onGuess, showSales, disabled }) => {
               disabled={disabled}
               fullWidth
             >
-              {games[0].Name}
+              {games[0].title}
             </Button>
           </CardContent>
         </Card>
@@ -47,7 +47,7 @@ const GamePair = ({ games, onGuess, showSales, disabled }) => {
             <Box
               component="img"
               src={games[1].imageUrl}
-              alt={games[1].Name}
+              alt={games[1].title}
               sx={{
                 width: '100%',
                 height: 'auto',
@@ -64,13 +64,13 @@ const GamePair = ({ games, onGuess, showSales, disabled }) => {
               disabled={disabled}
               fullWidth
             >
-              {games[1].Name}
+              {games[1].title}
             </Button>
           </CardContent>
         </Card>
         {showSales && (
           <Typography variant="h6" component="p" sx={{ ml: 2 }}>
-            {games[1].Global_Sales}M
+            {games[1].total_sales}M
           </Typography>
         )}
       </Box>

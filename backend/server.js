@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Bağlantısı
-const dbUrl = 'mongodb+srv://onurkagan999:qwerdf1234@cluster0.pfrndcu.mongodb.net/gamequiz?retryWrites=true&w=majority';
+const dbUrl = 'mongodb+srv://onurkagan999:qwerdf1234@cluster0.pfrndcu.mongodb.net/gamequizdeneme1?retryWrites=true&w=majority';
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,

@@ -8,11 +8,11 @@ uri = "mongodb+srv://onurkagan999:qwerdf1234@cluster0.pfrndcu.mongodb.net/?retry
 client = MongoClient(uri, server_api=ServerApi('1'))
 
 
-db = client['gamequiz']
+db = client['gamequizdeneme1']
 collection = db['games']
 
 # CSV dosyasını okuma
-df = pd.read_csv('C:/Users/Administrator/Downloads/vgsales.csv')
+df = pd.read_csv('C:/Users/Administrator/Downloads/vgchartz.csv')
 
 # Verileri MongoDB'ye yükleme
 data = df.to_dict(orient='records')

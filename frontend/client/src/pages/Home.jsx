@@ -25,14 +25,14 @@ const Home = () => {
   };
 
   const handleGuess = (guessedGame, otherGame) => {
-    if (guessedGame.Global_Sales > otherGame.Global_Sales) {
+    if (guessedGame.total_sales > otherGame.total_sales) {
       setScore(score + 1);
     } else {
       setScore(0); // Yanlış tahmin, skoru sıfırla
     }
     setShowSales(true); // Satış sayılarını göster
     setDisabled(true); // Butonları pasif hale getir
-    setTimeout(fetchGamesPair, 3000); // 3 saniye sonra yeni oyun çifti getir
+    setTimeout(fetchGamesPair, 1000); // 3 saniye sonra yeni oyun çifti getir
   };
 
   return (
